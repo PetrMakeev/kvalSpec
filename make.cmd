@@ -1,0 +1,1 @@
+pyinstaller --name kvalSpec --onefile --noconsole --add-data "icons;icons" --icon="icons/database.ico" main.py

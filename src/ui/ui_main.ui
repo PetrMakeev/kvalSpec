@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1140</width>
+    <height>583</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1140</width>
+    <height>583</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1140</width>
+    <height>583</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Квалификация</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frm_grid">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>1130</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="cmb_spec">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_spec">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Специалисты</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_podr">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>10</y>
+       <width>161</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Подразделение</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_kval">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>10</y>
+       <width>171</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Квал. звание</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmb_kval">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>40</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmb_zvan">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>40</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_zvan">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>10</y>
+       <width>171</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Спец. звание</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_prikaz">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>40</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_sel_prikaz">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>40</y>
+       <width>21</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_prikaz">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>10</y>
+       <width>191</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Приказ</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_srok_tg">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>10</y>
+       <width>200</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Срок сдачи в тек. году</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_srok_end">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>40</y>
+       <width>200</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Срок сдачи в просрочен</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_print">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTableView" name="table">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>1111</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmb_podr">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>40</y>
+       <width>161</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frm_edit">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>1131</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="lbl_family">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>250</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Фамилия</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_name">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>250</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Имя</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_lastname">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>100</y>
+       <width>250</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Отчество</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_podr">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>130</y>
+       <width>250</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Подразделение</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_edit_family">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>40</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_edit_name">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>70</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_edit_lastname">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>100</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_dolzh">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>160</y>
+       <width>250</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Должность</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_edit_dolzh">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>160</y>
+       <width>461</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_zvan">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>190</y>
+       <width>250</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Звание</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmb_edit_zvan">
+     <property name="geometry">
+      <rect>
+       <x>331</x>
+       <y>190</y>
+       <width>461</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmb_edit_kval">
+     <property name="geometry">
+      <rect>
+       <x>331</x>
+       <y>220</y>
+       <width>321</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_kval_zvan">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>220</y>
+       <width>250</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Квалификационное звание</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_edit_prikaz">
+     <property name="geometry">
+      <rect>
+       <x>331</x>
+       <y>250</y>
+       <width>271</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_prikaz">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>250</y>
+       <width>291</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Приказ о присвоении квалификации</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_edit_prikaz">
+     <property name="geometry">
+      <rect>
+       <x>601</x>
+       <y>250</y>
+       <width>21</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmb_edit_status">
+     <property name="geometry">
+      <rect>
+       <x>331</x>
+       <y>280</y>
+       <width>461</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_status">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>280</y>
+       <width>250</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Статус</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_save">
+     <property name="geometry">
+      <rect>
+       <x>331</x>
+       <y>380</y>
+       <width>101</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Сохранить</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_cancel">
+     <property name="geometry">
+      <rect>
+       <x>441</x>
+       <y>380</y>
+       <width>101</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Отмена</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmb_edit_podr">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>130</y>
+       <width>461</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chk_edit_podtv">
+     <property name="geometry">
+      <rect>
+       <x>681</x>
+       <y>220</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Подтверждено</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>frm_edit</zorder>
+   <zorder>frm_grid</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>cmb_spec</tabstop>
+  <tabstop>btn_podr</tabstop>
+  <tabstop>cmb_podr</tabstop>
+  <tabstop>btn_kval</tabstop>
+  <tabstop>cmb_kval</tabstop>
+  <tabstop>btn_zvan</tabstop>
+  <tabstop>cmb_zvan</tabstop>
+  <tabstop>btn_prikaz</tabstop>
+  <tabstop>txt_prikaz</tabstop>
+  <tabstop>btn_sel_prikaz</tabstop>
+  <tabstop>btn_srok_tg</tabstop>
+  <tabstop>btn_srok_end</tabstop>
+  <tabstop>btn_print</tabstop>
+  <tabstop>table</tabstop>
+  <tabstop>txt_edit_family</tabstop>
+  <tabstop>txt_edit_name</tabstop>
+  <tabstop>txt_edit_lastname</tabstop>
+  <tabstop>cmb_edit_podr</tabstop>
+  <tabstop>txt_edit_dolzh</tabstop>
+  <tabstop>cmb_edit_zvan</tabstop>
+  <tabstop>cmb_edit_kval</tabstop>
+  <tabstop>chk_edit_podtv</tabstop>
+  <tabstop>btn_edit_prikaz</tabstop>
+  <tabstop>cmb_edit_status</tabstop>
+  <tabstop>btn_save</tabstop>
+  <tabstop>btn_cancel</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
